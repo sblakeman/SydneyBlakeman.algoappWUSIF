@@ -7,26 +7,17 @@
 
 import UIKit
 
-struct Strategy {
-    let title: String
-    let trend: Trend
-    
-    enum Trend: String {
-        case up = "arrow.up"
-        case down = "arrow.down"
-        case neutral = "circle.and.line.horizontal"
-    }
-}
 
 class HomeViewController: UIViewController {
     
-    private let strategies: [Strategy] = [
-        .init(title: "Title A", trend: .up),
-        .init(title: "Title B", trend: .down),
-        .init(title: "Title C", trend: .up),
-        .init(title: "Title D", trend: .neutral),
-        .init(title: "Title E", trend: .down)
-    ]
+    private var strategies: [Strategy] {
+        if let data = UserDefaults.standard.data(forKey: "Strategies") {
+            if let decoded = try? JSONDecoder().decode([Strategy].self, from: data) {
+                return decoded
+            }
+        }
+        return []
+    }
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -34,6 +25,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(HTableViewCell.nib(), forCellReuseIdentifier: HTableViewCell.identifier)
     }
 
 }
@@ -44,16 +36,22 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return strategies.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let  mainView = UIStoryboard(name:"Main", bundle: nil)
+        let vc : MoreViewController = mainView.instantiateViewController(withIdentifier: "MoreViewController") as! MoreViewController
+        vc.strategy = strategies[indexPath.row]
+
+        self.present(vc, animated: true, completion:nil)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-                return UITableViewCell(style: .default, reuseIdentifier: "cell")
-                }
-                return cell
-            }()
-            
-        cell.textLabel?.text = strategies[indexPath.row].title
-        cell.imageView?.image = UIImage(systemName: strategies[indexPath.row].trend.rawValue)
+        let cell = tableView.dequeueReusableCell(withIdentifier: HTableViewCell.identifier, for: indexPath) as! HTableViewCell
+        cell.configure(title: strategies[indexPath.row].title, imageName: strategies[indexPath.row].trend.rawValue)
+
         return cell
     }
     
