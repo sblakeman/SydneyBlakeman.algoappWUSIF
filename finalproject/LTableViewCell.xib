@@ -40,28 +40,18 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzO-sO-OAQ">
-                        <rect key="frame" x="279" y="12" width="41" height="20"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="tinted" image="ellipsis" catalog="system">
-                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </buttonConfiguration>
-                    </button>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="qzO-sO-OAQ" secondAttribute="bottom" constant="12" id="2Z5-vQ-hiP"/>
-                    <constraint firstItem="qzO-sO-OAQ" firstAttribute="leading" secondItem="VEZ-Lr-CJh" secondAttribute="trailing" constant="15" id="Dc2-XZ-Zwg"/>
+                    <constraint firstAttribute="trailing" secondItem="VEZ-Lr-CJh" secondAttribute="trailing" constant="56" id="6Og-2u-Pol"/>
                     <constraint firstItem="DcL-fI-qOl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="MkA-co-p3T"/>
                     <constraint firstAttribute="bottom" secondItem="DcL-fI-qOl" secondAttribute="bottom" id="Ttj-wI-tdI"/>
                     <constraint firstItem="PYA-mg-PVL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="U22-qr-fBf"/>
                     <constraint firstItem="VEZ-Lr-CJh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XWZ-SW-WFi"/>
-                    <constraint firstAttribute="trailing" secondItem="qzO-sO-OAQ" secondAttribute="trailing" id="XaO-vB-KN0"/>
                     <constraint firstAttribute="bottom" secondItem="VEZ-Lr-CJh" secondAttribute="bottom" id="XlH-oe-UQu"/>
                     <constraint firstItem="VEZ-Lr-CJh" firstAttribute="leading" secondItem="DcL-fI-qOl" secondAttribute="trailing" constant="20" id="cWd-qO-RT9"/>
                     <constraint firstItem="DcL-fI-qOl" firstAttribute="leading" secondItem="PYA-mg-PVL" secondAttribute="trailing" constant="15" id="gjR-5k-1Ln"/>
                     <constraint firstItem="PYA-mg-PVL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="itc-9X-Vjb"/>
                     <constraint firstAttribute="bottom" secondItem="PYA-mg-PVL" secondAttribute="bottom" id="rdr-KV-swf"/>
-                    <constraint firstItem="qzO-sO-OAQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="sem-sV-atF"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -73,7 +63,4 @@
             <point key="canvasLocation" x="131.8840579710145" y="82.366071428571431"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="ellipsis" catalog="system" width="128" height="37"/>
-    </resources>
 </document>

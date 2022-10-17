@@ -21,7 +21,6 @@ class HTableViewCell: UITableViewCell {
     public func configure(title: String, imageName: String ){
         pic.image = UIImage(systemName: imageName)
         strat.text = title
-        
     }
 
     override func awakeFromNib() {

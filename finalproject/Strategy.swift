@@ -8,18 +8,22 @@
 import Foundation
 
 struct Strategy: Codable {
+    let id: UUID
+    let startTime: Date
     let title: String
     let startAmount: Double
     
     let peRatio: Double?
     let pBvRatio: Double?
     let deRatio: Double?
-    let curRatio: Double?
+    let pricesalesratio: Double?
     let roeRatio: Double?
-    let minRatio: Double?
+ 
+        
+    let selectedTickers: [String]
     
     var trend: Trend {
-        let amount = 100.0
+        let amount = 1000.0
 
         if amount > startAmount {
             return .up

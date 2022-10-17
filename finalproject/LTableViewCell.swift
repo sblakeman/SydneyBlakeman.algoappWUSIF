@@ -22,7 +22,7 @@ class LTableViewCell: UITableViewCell {
     public func configure(thescore: String, title: String, imageName: String ){
         score.text = thescore
         growth.text = title
-        pic.image = UIImage(systemName: imageName)
+        pic.image = UIImage(named: imageName)
         
         
     }

@@ -31,22 +31,14 @@
                             <constraint firstAttribute="width" constant="25" id="jar-OU-Uty"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfp-d9-Amn">
-                        <rect key="frame" x="276.5" y="0.0" width="43.5" height="44"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="ellipsis" catalog="system"/>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="vfr-b1-vrK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BPV-Pw-2aK"/>
-                    <constraint firstItem="Rfp-d9-Amn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CNe-pM-0mk"/>
                     <constraint firstAttribute="bottom" secondItem="98v-q2-qpg" secondAttribute="bottom" id="CWD-6V-aN1"/>
                     <constraint firstItem="98v-q2-qpg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="Fjy-Zv-Uin"/>
+                    <constraint firstAttribute="trailing" secondItem="vfr-b1-vrK" secondAttribute="trailing" constant="48.5" id="GRw-Vg-gwt"/>
                     <constraint firstAttribute="bottom" secondItem="vfr-b1-vrK" secondAttribute="bottom" id="UOs-B1-ERK"/>
                     <constraint firstItem="98v-q2-qpg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UTS-xL-O1q"/>
-                    <constraint firstItem="Rfp-d9-Amn" firstAttribute="leading" secondItem="vfr-b1-vrK" secondAttribute="trailing" constant="5" id="W6Q-cX-vTh"/>
-                    <constraint firstAttribute="bottom" secondItem="Rfp-d9-Amn" secondAttribute="bottom" id="apW-7a-WTp"/>
-                    <constraint firstAttribute="trailing" secondItem="Rfp-d9-Amn" secondAttribute="trailing" id="j8c-wb-fNh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -57,7 +49,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="ellipsis" catalog="system" width="128" height="37"/>
-    </resources>
 </document>
